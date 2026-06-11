@@ -1,0 +1,22 @@
+version: '3.8'
+
+services:
+  # --- BEYİN: BACKEND ---
+  backend:
+    build: ./backend
+    container_name: nexus-backend
+    ports:
+      - "8000:8000"
+    env_file:
+      - ./backend/.env
+    restart: always
+
+  # --- YÜZ: FRONTEND ---
+  frontend:
+    build: ./frontend
+    container_name: nexus-frontend
+    ports:
+      - "3000:3000"
+    depends_on:
+      - backend
+    restart: always

@@ -1,0 +1,14 @@
+# Bağımlılıklar 
+node_modules/
+frontend/node_modules/
+backend/node_modules/
+
+# Veritabanı dosyaları
+hukuk_db/
+nexus_db/
+nexus_records.db
+
+# Editör ayarları ve loglar
+.vscode/
+*.log
+.env

@@ -1,0 +1,59 @@
+@import "tailwindcss";
+
+:root {
+  --background: #09090b;
+  --foreground: #e4e4e7;
+  --primary: #4f46e5;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: 'Inter', sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Lüks Seçim Rengi */
+::selection { background: rgba(79, 70, 229, 0.4); color: white; }
+
+/* --- EDITOR AYARLARI (DÜZELTİLDİ) --- */
+/* Not: Min-height'i kaldırdık, artık parent container ne derse o olacak */
+
+.ql-toolbar {
+  background-color: #121215 !important;
+  border: none !important;
+  border-bottom: 1px solid #27272a !important;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+  padding: 12px 16px !important;
+}
+
+.ql-container {
+  border: none !important;
+  background-color: #09090b !important;
+  border-bottom-left-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+  font-family: 'Times New Roman', Times, serif !important;
+}
+
+.ql-editor {
+  color: #f1f5f9 !important;
+  font-size: 16px;
+  line-height: 1.8;
+  padding: 2rem !important;
+  /* KRİTİK DÜZELTME: Sabit yükseklik yerine %100 yükseklik */
+  height: 100% !important; 
+  overflow-y: auto;
+}
+
+.ql-editor.ql-blank::before { 
+  color: #52525b !important; 
+  font-style: italic; 
+  font-family: 'Inter', sans-serif;
+}
+
+/* Scrollbar Tasarımı */
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: #27272a; border-radius: 10px; }
+::-webkit-scrollbar-thumb:hover { background: #3f3f46; }
